@@ -5,9 +5,7 @@ public class Test {
 
     public static void personListTest() {
 
-        LinkedList<Person> personList = new LinkedList<Person>();
-        Person HansNielsen = new Person(100, "Hans Nielsen");
-        System.out.println();
+
 
 
         LinkedList<Teacher> teacherList = new LinkedList<Teacher>();
@@ -22,11 +20,34 @@ public class Test {
 
 
         teacherList.add(teacher1);
-        teacherList.add(teacher1);
+        teacherList.add(teacher2);
 
         for (Teacher teach : teacherList) {
             System.out.println(teach.toString());
 
         }
+
+        LinkedList<Student> StudentList = new LinkedList<Student>();
+        Student Student1 = new Student(202, "Bent H. Pedersen");
+        Student1.setEmail("bhp@easv.dk");
+        Student1.setGrade(10);
+
+
+
+        Student Student2 = new Student(203, "Lukas V. Holm");
+        Student2.setEmail("lukhol01@easv.dk");
+        Student2.setGrade(50);
+
+
+        StudentList.add(Student1);
+        StudentList.add(Student2);
+
+        for (Student teach : StudentList) {
+            System.out.println(teach.toString());
+
+        }
+
+
+
     }
 }
