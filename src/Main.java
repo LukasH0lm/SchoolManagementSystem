@@ -23,7 +23,7 @@ public class Main {
 
         Student stud2 = new Student(102, "Chris Sutherland");
         stud2.setEmail("chrsut01@easv365.dk");
-        GradeInfo grade21 = new GradeInfo("SCO",7);
+        GradeInfo grade21 = new GradeInfo("SCO",4);
         GradeInfo grade22 = new GradeInfo("ITO",7);
 
         stud2.addGrade(grade21);
