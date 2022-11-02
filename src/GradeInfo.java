@@ -1,10 +1,11 @@
 public class GradeInfo {
 
-    String subject;
-    int grade;
+    private String subject;
+    private int grade;
 
     GradeInfo(String subject, int grade){
-
+        this.subject = subject;
+        this.grade = grade;
     }
 
     public String getSubject() {

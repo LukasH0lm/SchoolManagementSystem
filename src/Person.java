@@ -1,4 +1,6 @@
-public abstract class Person {
+public class Person {
+    //Person is not abstact because of line 30 in MainMenu.java
+
 
     private int id;
     private String name;
@@ -31,6 +33,10 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

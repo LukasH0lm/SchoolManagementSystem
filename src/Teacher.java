@@ -34,11 +34,12 @@ public class Teacher extends Person {
     }
 
 
-
     @Override
     public String toString() {
-        return this.getId() + "\t" + this.getName() + "\t" + getEmail() + "\t" + this.getInitials() + "\t" + this.getSubjects();
+        return "Teacher{" +
+                "subjects=" + subjects +
+                ", initials='" + initials + '\'' +
+                ", salary=" + salary +
+                '}';
     }
-
-
 }
