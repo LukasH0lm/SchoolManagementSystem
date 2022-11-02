@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class Student extends Person {
 
@@ -43,15 +44,24 @@ public class Student extends Person {
     }
 
     public void addGrade(GradeInfo grade) {
+
+        for (GradeInfo grad:
+             gradeReport) {
+            if (Objects.equals(grad.getSubject().toLowerCase(), grade.getSubject().toLowerCase())){
+                this.gradeReport.remove(grad);
+            }
+        }
+
         this.gradeReport.add(grade);
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "ID='" + getId() + '\'' +
-                "name='" + getName() + '\'' +
-                "education='" + education + '\'' +
+                "ID=" + getId() +
+                "\tname='" + getName() + '\'' +
+                "\teducation='" + education + '\'' +
+                "\tgrade Average: " + getAverageGrade() +
                 '}';
     }
 }

@@ -1,11 +1,12 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class Teacher extends Person {
 
-    LinkedList<String> subjects = new LinkedList<>();
-    String initials;
-    double salary;
+    private LinkedList<String> subjects = new LinkedList<>();
+    private String initials;
+    private double salary;
 
 
     public Teacher(int id, String name, String initials){
@@ -26,6 +27,14 @@ public class Teacher extends Person {
     }
 
     public void addSubjects(String subject){
+
+        for (String sub:
+                subjects) {
+            if (Objects.equals(sub.toLowerCase(), subject.toLowerCase())){
+                this.subjects.remove(subject);
+            }
+        }
+
         this.subjects.add(subject);
     }
 
@@ -37,9 +46,11 @@ public class Teacher extends Person {
     @Override
     public String toString() {
         return "Teacher{" +
-                "subjects=" + subjects +
-                ", initials='" + initials + '\'' +
-                ", salary=" + salary +
+                "iD=" + getId() +
+                "\tname='" + getName() + '\'' +
+                "\tsubjects=" + subjects +
+                ",\tinitials='" + initials + '\'' +
+                ", \tsalary=" + salary +
                 '}';
     }
 }
