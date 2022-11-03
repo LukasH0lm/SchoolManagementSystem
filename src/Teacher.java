@@ -15,7 +15,7 @@ public class Teacher extends Person {
     }
 
     public String getSubjects(){
-        return this.subjects.get(0);
+        return this.subjects.toString();
     }
 
     public String getInitials() {

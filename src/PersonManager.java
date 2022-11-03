@@ -2,7 +2,7 @@ import java.util.LinkedList;
 
 public class PersonManager {
 
-    LinkedList<Person> persons = new LinkedList<>();
+    private LinkedList<Person> persons = new LinkedList<>();
 
     public PersonManager(){
 

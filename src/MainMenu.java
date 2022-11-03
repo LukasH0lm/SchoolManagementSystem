@@ -68,8 +68,7 @@ public class MainMenu{
             i++;
 
         }
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
+        int option = getOption();
         doStudentAction(option, (Student) person);
     }
 
@@ -83,8 +82,7 @@ public class MainMenu{
             i++;
 
         }
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
+        int option = getOption();
         doTeacherAction(option, (Teacher) person);
     }
 

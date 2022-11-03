@@ -1,8 +1,7 @@
-public class Person {
-    //Person is not abstact because of line 30 in MainMenu.java
+public abstract class Person {
 
 
-    private int id;
+    private final int id;
     private String name;
     private String email;
 
